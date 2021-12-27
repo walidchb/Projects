@@ -15,9 +15,7 @@
   margin: 1em;
 }
 
-.statistic{
-  width: 60%;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

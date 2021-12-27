@@ -2,9 +2,11 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import { Input, Button } from "antd";
-import { render } from "@testing-library/react";
 import axios from "axios";
-import DemoColumn from "../src/Component/DemoColumn";
+import DemoColumn from "./Component/DemoColumn";
+import DemoPie from "./Component/Pie";
+import { Row, Col } from "antd";
+import FoodieTable from "./Component/FoodieTable";
 
 function App() {
   const [foodName, setFoodName] = useState("");
@@ -57,16 +59,6 @@ function App() {
       .catch((error) => console.log("error", error));
   };
 
-  function displayData(posts) {
-    return posts.map((post, index) => (
-      <div className="displayData">
-        <table></table>
-        <h3>{post.food_name}</h3>
-        <h3>{post.num_of_votes}</h3>
-      </div>
-    ));
-  }
-
   return (
     <div className="App">
       <Input
@@ -80,11 +72,15 @@ function App() {
         Vote !{" "}
       </Button>
 
-      {displayData(foodData)}
-
-      <div className="statistic">
-        <DemoColumn data={foodData} />
-      </div>
+      <Row gutter={[8, 8]}>
+        <Col span={12} className="Cols">
+          <DemoColumn data={foodData} />
+        </Col>
+        <Col span={12} className="Cols">
+          <DemoPie data={foodData} />
+        </Col>
+      </Row>
+      <FoodieTable data={foodData} />
     </div>
   );
 }
