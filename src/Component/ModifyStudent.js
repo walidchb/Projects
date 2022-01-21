@@ -84,7 +84,7 @@ function ModifyStudent() {
       />
       <Button type="primary" onClick={Modify}>
         {" "}
-        Modify{" "}
+        Modify Student{" "}
       </Button>
     </div>
   );

@@ -1,0 +1,25 @@
+*{
+    text-align: center;
+
+}
+.Display{
+    display: flex;
+}
+.Display .ADD {
+    text-align: center;
+    width: 50%;
+}
+.Display .DisplayNote {
+    text-align: center;
+    width: 50%;
+}
+
+.notepage{
+    height: 100vh;
+    background-image: url("./USTHB.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
